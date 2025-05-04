@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Shadowed Library</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background and General Layout */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('your-haunted-library-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-attachment: fixed;
+      flex-direction: column;
+    }
+
+    /* Spooky Header Styling */
+    .header {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 5px;
+      font-size: 3em;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    /* Glitch Effect Animation */
+    @keyframes flicker {
+      0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+        opacity: 1;
+      }
+      50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+        opacity: 0.6;
+      }
+      100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+        opacity: 0.8;
+      }
+    }
+
+    /* Spooky Text Line */
+    .spooky-text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5em;
+      color: #ff0000;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+      animation: pulse 2s infinite alternate;
+    }
+
+    /* Pulse Effect Animation */
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+        opacity: 1;
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6);
+        opacity: 0.8;
+      }
+    }
+
+    /* Vanishing Text Styling */
+    .vanishing-text {
+      font-size: 1.2em;
+      color: #999;
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: fadeInOut 5s infinite;
+    }
+
+    /* Fade In & Out Effect */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Navigation */
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8);
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Music Player Styling */
+    .music-player {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+
+    .music-player audio {
+      width: 300px;
+      background: transparent;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+
+    footer p {
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- Spooky Header -->
+    <div class="header">
+      The Shadowed Library
+    </div>
+
+    <!-- Vanishing Text about the Haunted Library -->
+    <div class="vanishing-text">
+      "The walls whisper, the shelves creak, and the lost pages beg to be read."
+    </div>
+
+    <!-- Spooky Text Line -->
+    <div class="spooky-text">
+      "A forgotten library, with stories never meant to be told..."
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Creepy Stories Section -->
+    <div class="creepy-stories">
+      <h2>Frightening Tales from the Haunted Library</h2>
+      <p>Delve into the stories whispered through the haunted halls of The Shadowed Library. Uncover the fate of those who dared to open the forbidden books.</p>
+      
+      <div class="story">
+        <h3>The Vanishing Librarian</h3>
+        <p>In 1967, the head librarian, Margaret Collins, mysteriously vanished into thin air, leaving behind only an empty desk and a trembling book. Some say her ghost still lingers among the shelves, searching for her lost journal.</p>
+      </div>
+
+      <div class="story">
+        <h3>The Whispering Pages</h3>
+        <p>A peculiar book was discovered in the deepest corner of the library, its pages filled with cryptic messages. When opened, readers report hearing faint whispers from the book, warning them not to finish reading.</p>
+      </div>
+
+      <div class="story">
+        <h3>The Haunted Shelf</h3>
+        <p>On stormy nights, a particular shelf is said to move on its own. Books fall from it with no apparent cause, and strange symbols are etched into the wood. Anyone who touches it never leaves with the same memories.</p>
+      </div>
+    </div>
+
+    <!-- Music Player Section -->
+    <div class="music-player">
+      <audio controls>
+        <source src="scary.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+      <!-- Image Placeholders -->
+      <img src="image1.jpg" alt="Haunted Library Image 1">
+      <img src="image2.jpg" alt="Haunted Library Image 2">
+      <img src="image3.jpg" alt="Haunted Library Image 3">
+      <!-- Add more images up to 30 -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 The Shadowed Library. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
